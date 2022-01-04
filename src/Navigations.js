@@ -1,22 +1,25 @@
-import { SideNavigation } from "@awsui/components-react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {
+  ColumnLayout,
+  Header,
+  Link,
+  SpaceBetween,
+} from "@awsui/components-react";
+import { Fragment } from "react/cjs/react.production.min";
 
 const Navigations = () => {
-  const [activeHref, setActiveHref] = useState("/alerts");
-  const navigate = useNavigate();
-
   return (
-    <SideNavigation
-      activeHref={activeHref}
-      onFollow={function updateActiveHref(e) {
-        setActiveHref(e.detail.activeHref);
-        navigate(e.detail.activeHref);
-      }}
-      items={[
-          {text: "Alerts", id: "alerts", href: "/alerts"}
-      ]}
-    />
+    <>
+      <Header>Components</Header>
+
+      <SpaceBetween direction="vertical" size="xm">
+        <Link color="normal">Alerts</Link>
+        <Link color="normal">Alerts</Link>
+        <Link color="normal">Alerts</Link>
+        <Link color="normal">Alerts</Link>
+        <Link color="normal">Alerts</Link>
+        <Link color="normal">Alerts</Link>
+      </SpaceBetween>
+    </>
   );
 };
 

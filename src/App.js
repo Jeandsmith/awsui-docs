@@ -9,7 +9,7 @@ const App = () => {
     <AppLayout
       contentHeader={<ContentHeader />}
       content={<MainContent />}
-      tools="Some tool"
+      navigation={<Navigations/>}
     />
   );
 };
